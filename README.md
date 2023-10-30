@@ -1,9 +1,18 @@
-# Cookiecutter Data Science
+# Cookiecutter ORM
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
+Cookiecutter template for whenever you just want to connect to a database (or two!) and use SQLAlchemy. This project is forked from the fantastic [Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/), go check it out!
 
+## But why?
 
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
+SQLAlchemy can be quite powerful, but most tutorials are focused on integrating it into an application you are developing from the very beginning. However, SQLAlchemy can also help when you just want to explore an _existing_ database! This is not a replacement to a proper DBMS, but leveraging python and the models from SQLAlchemy can still speed up development in projects such as:
+
+- Exploring an existing database and querying basic data
+- Migrating data between two databases, applying the relevant transformations and dataa enhancements
+- Exporting data to other services
+
+## But _how?_
+
+SQLAlchemy relies on models defined in code. Typically, you'd have to define them yourself, but they can also be grabbed from an existing database using [SQLACodegen](https://github.com/agronholm/sqlacodegen). Furthermore, these models can be used to generate a simple png view of the tables to aid in that first discovery phase!
 
 
 ### Requirements to use the cookiecutter template:
@@ -26,19 +35,8 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter https://github.com/TaruDesigns/cookiecutter-pyorm
 
-
-[![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
-
-### New version of Cookiecutter Data Science
-------------
-Cookiecutter data science is moving to v2 soon, which will entail using
-the command `ccds ...` rather than `cookiecutter ...`. The cookiecutter command
-will continue to work, and this version of the template will still be available.
-To use the legacy template, you will need to explicitly use `-c v1` to select it.
-Please update any scripts/automation you have to append the `-c v1` option (as above),
-which is available now.
 
 
 ### The resulting directory structure
@@ -93,9 +91,6 @@ The directory structure of your new project looks like this:
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
-## Contributing
-
-We welcome contributions! [See the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).
 
 ### Installing development requirements
 ------------
