@@ -22,7 +22,7 @@ def remove(filepath):
 def remove_db2():
     # Check if user wants the folder
     cookiecutter_var = "{{cookiecutter.add_db2}}"
-    db2folder_cookiecutter = "db{{ cookiecutter.db_2_name.lower().replace(' ', '_') }}"
+    db2folder_cookiecutter = "db{{ cookiecutter.__db2normalname__ }}"
     remove_db2 = cookiecutter_var == "no"
 
     # User does not want folder so remove it
@@ -36,10 +36,19 @@ def remove_db2():
         print("Database 2 Files Removed!")
     return remove_db2
 
-
+def add_to_gitignore(line):
+    file_path = os.path.join(
+            parent_path, 
+            "{{ cookiecutter.repo_name }}", 
+            ".gitignore"
+        )
+    with open(file_path, 'a') as gitignore_file:
+        gitignore_file.write('\n' + line)
+        print(f"Added {line} to gitignore!")
 
 if __name__ == "__main__":
     print("Post Repo Creation Cleanup...")
     remove_db2 = remove_db2()
+    add_to_gitignore("secret.py")
     print("Repo created! Make sure you check the README.md to init the models")
     

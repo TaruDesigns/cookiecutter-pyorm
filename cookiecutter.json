@@ -4,6 +4,7 @@
     "author_name": "TaruDesigns",
     "description": "A basic boilerplate example to explore a database with SQLAlchemy.",
     "db_1_name": "1",
+    "__db1normalname__": "{{ cookiecutter.db_1_name.lower().replace(' ', '_') }}",
     "db_1_type": [
         "PostgreSQL",
         "SQLite",
@@ -19,6 +20,7 @@
         "no"
     ],
     "db_2_name": "2",
+    "__db2normalname__": "{{ cookiecutter.db_2_name.lower().replace(' ', '_') }}",
     "db_2_type": [
         "PostgreSQL",
         "SQLite",

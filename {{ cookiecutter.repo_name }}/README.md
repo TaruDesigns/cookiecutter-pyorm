@@ -1,6 +1,20 @@
 {{cookiecutter.project_name}}
 ==============================
 
+# Install requirements
+
+Create a venv and activate it
+
+`python -m venv venv`
+
+Install requirements
+
+`pip install -r requirements.txt`
+
+Generate models
+
+
+
 {{cookiecutter.description}}
 
 Project Organization
