@@ -1,18 +1,10 @@
 import sys
 
-REQUIRED_PYTHON = "{{ cookiecutter.python_interpreter }}"
 
 
 def main():
     system_major = sys.version_info.major
-    if REQUIRED_PYTHON == "python":
-        required_major = 2
-    elif REQUIRED_PYTHON == "python3":
-        required_major = 3
-    else:
-        raise ValueError("Unrecognized python interpreter: {}".format(
-            REQUIRED_PYTHON))
-
+    required_major = 3 # Python major version. Only Python 3 is supported
     if system_major != required_major:
         raise TypeError(
             "This project requires Python {}. Found: Python {}".format(
