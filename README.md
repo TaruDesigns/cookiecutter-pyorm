@@ -15,9 +15,18 @@ SQLAlchemy can be quite powerful, but most tutorials are focused on integrating 
 SQLAlchemy relies on models defined in code. Typically, you'd have to define them yourself, but they can also be grabbed from an existing database using [SQLACodegen](https://github.com/agronholm/sqlacodegen). Furthermore, these models can be used to generate a simple png view of the tables to aid in that first discovery phase!
 
 
+## Feature roadmap
+
+- [x] Basic project structure and prompts 
+- [x] Connection string generator
+- [x] Model generator
+- [ ] ER model printer
+- [ ] Autopopulate a basic jupyter notebook with the models that were created previously
+- [ ] Fill requirements.txt with the right dependencies
+
 ### Requirements to use the cookiecutter template:
 -----------
- - Python 2.7 or 3.5+
+ - Python 3.8+
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
 
 ``` bash
@@ -46,7 +55,6 @@ The directory structure of your new project looks like this:
 
 ```
 ├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
 │   ├── external       <- Data from third party sources.
