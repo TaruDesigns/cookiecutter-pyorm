@@ -15,7 +15,7 @@
     "db_1_username": "Username of {{ cookiecutter.db_1_name }}",
     "db_1_password": "Password of {{ cookiecutter.db_1_name }}",
     "db_1_port": "Port of {{ cookiecutter.db_1_name }}",
-    "db_2_name": "Name to be assigned to second database (e.g. Production, Origin)",
+    "db_2_name": "Name to be assigned to second database (e.g. Production, Origin). Leave empty to ignore",
     "db_2_type": [
         "PostgreSQL",
         "SQLite",
@@ -23,10 +23,10 @@
         "SQLServer",
         ""
     ],
-    "db_2_host": "Host to connect to {{ cookiecutter.db_2_name }}",
-    "db_2_username": "Username of {{ cookiecutter.db_2_name }}",
-    "db_2_password": "Password of {{ cookiecutter.db_2_name }}",
-    "db_2_port": "Port of {{ cookiecutter.db_2_name }}",
+    "db_2_host": "Host to connect to {{ cookiecutter.db_2_name }}. Leave empty to ignore",
+    "db_2_username": "Username of {{ cookiecutter.db_2_name }}. Leave empty to ignore",
+    "db_2_password": "Password of {{ cookiecutter.db_2_name }}. Leave empty to ignore",
+    "db_2_port": "Port of {{ cookiecutter.db_2_name }}. Leave empty to ignore",
     "open_source_license": [
         "MIT",
         "BSD-3-Clause",
