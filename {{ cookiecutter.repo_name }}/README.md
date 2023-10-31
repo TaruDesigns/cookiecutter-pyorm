@@ -3,15 +3,11 @@
 
 # Install requirements
 
-Create a venv and activate it
+Make sure your current working directory is the root folder `({{ cookiecutter.repo_name }})`
+Create a venv and activate it `python -m venv venv`
+Install requirements `pip install -r requirements.txt`
+Generate models `python helpers/generatemodels.py`
 
-`python -m venv venv`
-
-Install requirements
-
-`pip install -r requirements.txt`
-
-Generate models
 
 
 

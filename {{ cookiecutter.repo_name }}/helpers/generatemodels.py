@@ -42,17 +42,17 @@ def extract_class_names(filename: str) -> list[str]:
 
 if __name__ == "__main__":
     # Models for DB 1
-    print("Generating models for {{ cookiecutter.__db1normalname__ }}")
+    print("Generating models for db{{ cookiecutter.__db1normalname__ }}")
     file_db1 = os.path.join( 
-            "{{ cookiecutter.__db1normalname__ }}",
+            "db{{ cookiecutter.__db1normalname__ }}",
             "models.py"
     )    
     url_db1 = urlgen{{ cookiecutter.__db1normalname__ }}()
     create_models(connectionstring=url_db1, fileout=file_db1)
     {% if cookiecutter.add_db2 == "yes" %}    
-    print("Generating models for {{ cookiecutter.__db2normalname__ }}")
+    print("Generating models for db{{ cookiecutter.__db2normalname__ }}")
     file_db2 = os.path.join( 
-            "{{ cookiecutter.__db2normalname__ }}",
+            "db{{ cookiecutter.__db2normalname__ }}",
             "models.py"
     )    
     url_db2 = urlgen{{ cookiecutter.__db2normalname__ }}()
