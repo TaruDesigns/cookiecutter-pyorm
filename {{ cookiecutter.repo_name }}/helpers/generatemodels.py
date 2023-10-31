@@ -1,6 +1,8 @@
+import os
+import ast
+
 from sqlalchemy import create_engine
 from sqlacodegen import CodeGenerator
-import ast
 from db{{ cookiecutter.__db1normalname__ }}.urlgen import urlgenerator as urlgen{{ cookiecutter.__db1normalname__ }}
 {% if cookiecutter.add_db2 == "yes" %}
 from db{{ cookiecutter.__db2normalname__ }}.urlgen import urlgenerator as urlgen{{ cookiecutter.__db2normalname__ }}
@@ -39,6 +41,20 @@ def extract_class_names(filename: str) -> list[str]:
     return class_names
 
 if __name__ == "__main__":
-    print("Test")
-    print(urlgen{{ cookiecutter.__db1normalname__ }}())
-    print(urlgen{{ cookiecutter.__db1normalname__ }}())
+    # Models for DB 1
+    print("Generating models for {{ cookiecutter.__db1normalname__ }}")
+    file_db1 = os.path.join( 
+            "{{ cookiecutter.__db1normalname__ }}",
+            "models.py"
+    )    
+    url_db1 = urlgen{{ cookiecutter.__db1normalname__ }}()
+    create_models(connectionstring=url_db1, fileout=file_db1)
+    {% if cookiecutter.add_db2 == "yes" %}    
+    print("Generating models for {{ cookiecutter.__db2normalname__ }}")
+    file_db2 = os.path.join( 
+            "{{ cookiecutter.__db2normalname__ }}",
+            "models.py"
+    )    
+    url_db2 = urlgen{{ cookiecutter.__db2normalname__ }}()
+    create_models(connectionstring=url_db2, fileout=file_db2)
+    {% endif %}    
