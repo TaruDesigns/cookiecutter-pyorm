@@ -1,4 +1,4 @@
-from sqlalchemy import inspect
+from sqlalchemy import inspect as sqlinspect
 import graphviz
 from lxml import etree
 import os
@@ -21,7 +21,7 @@ def generate_data_model_diagram(models, output_file="my_data_model_diagram"):
 
     # Iterate through each SQLAlchemy model
     for model in models:
-        insp = inspect(model)
+        insp = sqlinspect(model)
         name = insp.class_.__name__
 
         # Create an HTML-like label for each model as a rich table

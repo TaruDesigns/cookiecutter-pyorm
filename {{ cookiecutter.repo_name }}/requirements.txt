@@ -6,10 +6,10 @@ flake8
 ruff
 python-dotenv>=0.5.1
 psycopg2
-mysqlclient
+#mysqlclient Can't install through pip
 pyodbc
 pymssql
-sqlacodegen
+sqlacodegen-v2
 SQLAlchemy
 graphviz
 lxml

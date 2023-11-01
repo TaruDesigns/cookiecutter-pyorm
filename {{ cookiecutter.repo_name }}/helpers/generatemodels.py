@@ -7,7 +7,7 @@ from db{{ cookiecutter.__db2normalname__ }}.urlgen import urlgenerator as urlgen
 {% endif %}
 
 def create_models(connectionstring: str, fileout: str):
-    command = f"sqlacodegen {connectionstring} --outfile {fileout}"
+    command = f"sqlacodegen_v2 {connectionstring} --outfile {fileout}"
     try:
         subprocess.run(command, shell=True, check=True)
         print(f"Models generated successfully: {fileout}")
