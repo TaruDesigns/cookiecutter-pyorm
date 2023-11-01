@@ -26,7 +26,7 @@ SQLAlchemy relies on models defined in code. Typically, you'd have to define the
 
 ### Requirements to use the cookiecutter template:
 -----------
- - Python 3.8+
+ - Python 3.8-3.10+ (Python 3.11 and 3.12 can't export the database models)
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
 
 ``` bash

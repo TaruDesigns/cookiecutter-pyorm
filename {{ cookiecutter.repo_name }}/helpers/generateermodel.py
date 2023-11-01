@@ -122,12 +122,9 @@ if __name__ == "__main__":
             "db{{ cookiecutter.__db1normalname__ }}",
             "ermodel" # Doesn't need the extension
     )    
-    module_db1 = os.path.join( 
-            "db{{ cookiecutter.__db1normalname__ }}",
-            "models.py" 
-    )     
+    module_db1 = "db{{ cookiecutter.__db1normalname__ }}.models.py"
     models_db1 = get_models(module_name=module_db1)
-    generate_data_model_diagram(models=models_db1, fileout=file_db1)
+    generate_data_model_diagram(models=models_db1, output_file=file_db1)
     add_web_font_and_interactivity(
         f"{file_db1}.svg", f"{file_db1}_int.svg"
     )    
@@ -139,12 +136,9 @@ if __name__ == "__main__":
             "db{{ cookiecutter.__db2normalname__ }}",
             "ermodel" # Doesn't need the extension
     )    
-    module_db1 = os.path.join( 
-            "db{{ cookiecutter.__db1normalname__ }}",
-            "models.py" 
-    )      
+    module_db2 = "db{{ cookiecutter.__db2normalname__ }}.models.py"    
     models_db2 = get_models(module_name=module_db2)
-    generate_data_model_diagram(models=models_db2, fileout=file_db2)
+    generate_data_model_diagram(models=models_db2, output_file=file_db2)
     add_web_font_and_interactivity(
         f"{file_db2}.svg", f"{file_db2}_int.svg"
     )       
