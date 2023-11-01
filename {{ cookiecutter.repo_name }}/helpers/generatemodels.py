@@ -23,23 +23,6 @@ def create_models(connectionstring: str, fileout: str):
         f.write(models)
 
 
-def extract_class_names(filename: str) -> list[str]:
-    """Extract classes from a python file
-
-    Args:
-        filename (str): _description_
-
-    Returns:
-        list[str]: list of class names
-    """
-    class_names = []
-    with open(filename, "r") as file:
-        tree = ast.parse(file.read())
-        for node in ast.walk(tree):
-            if isinstance(node, ast.ClassDef):
-                class_names.append(node.name)
-    return class_names
-
 if __name__ == "__main__":
     # Models for DB 1
     print("Generating models for db{{ cookiecutter.__db1normalname__ }}")

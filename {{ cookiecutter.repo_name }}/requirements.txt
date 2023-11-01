@@ -11,3 +11,5 @@ pyodbc
 pymssql
 sqlacodegen
 SQLAlchemy
+graphviz
+lxml
