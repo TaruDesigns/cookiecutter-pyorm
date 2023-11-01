@@ -20,13 +20,13 @@ SQLAlchemy relies on models defined in code. Typically, you'd have to define the
 - [x] Basic project structure and prompts 
 - [x] Connection string generator
 - [x] Model generator
-- [ ] ER model printer
+- [x] ER model printer
 - [ ] Autopopulate a basic jupyter notebook with the models that were created previously
 - [ ] Fill requirements.txt with the right dependencies
 
 ### Requirements to use the cookiecutter template:
 -----------
- - Python 3.8-3.10+ (Python 3.11 and 3.12 can't export the database models)
+ - Python 3.8+
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
 
 ``` bash
@@ -40,6 +40,9 @@ $ conda config --add channels conda-forge
 $ conda install cookiecutter
 ```
 
+### Requirements to generate the SVG diagrams:
+
+You need [Graphviz](https://graphviz.org/) in order to generate the SVGs. 
 
 ### To start a new project, run:
 ------------
@@ -51,7 +54,7 @@ $ conda install cookiecutter
 ### The resulting directory structure
 ------------
 
-The directory structure of your new project looks like this: 
+The directory structure of your new project looks like this (after running the model generation): 
 
 ```
 ├── LICENSE
@@ -62,7 +65,19 @@ The directory structure of your new project looks like this:
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
 │
+├── db(name)
+│   ├── __init.py__    <- Dummy to be able to import the module
+│   ├── models.py      <- SQL Alchemy models. 
+│   ├── urlgen.py      <- Helper to generate the connection string
+│   ├── ermodel.svg    <- Diagram of the models
+│   └── secret.py      <- Secrets to build the connection string
+│
+│
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+|
+├── generatediagrams.py <- Script to generate SVG diagrams of the models
+│
+├── generatemodels.py   <- Script to generate SQL Alchemy models    
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │

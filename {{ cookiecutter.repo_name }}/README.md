@@ -1,12 +1,18 @@
 {{cookiecutter.project_name}}
 ==============================
 
-# Install requirements
+# Getting started
 
+## Create environment
 Make sure your current working directory is the root folder `({{ cookiecutter.repo_name }})`
 Create a venv and activate it `python -m venv venv`
 Install requirements `pip install -r requirements.txt`
-Generate models `python helpers/generatemodels.py`
+Make sure you have installed [Graphviz](https://graphviz.org/)
+
+## Generate models
+Generate models `python generatemodels.py`
+Generate Diagrams `python generatediagrams.py`
+
 
 
 
@@ -24,7 +30,27 @@ Project Organization
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
+    ├── db{{ cookiecutter.__db1normalname__ }}
+    │   ├── __init.py__    <- Dummy to be able to import the module
+    │   ├── models.py      <- SQL Alchemy models. 
+    │   ├── urlgen.py      <- Helper to generate the connection string
+    │   ├── ermodel.svg    <- Diagram of the models
+    │   └── secret.py      <- Secrets to build the connection string
+    │
+    |{% if cookiecutter.add_db2 == "yes" %}
+    ├── db{{ cookiecutter.__db2normalname__ }}
+    │   ├── __init.py__    <- Dummy to be able to import the module
+    │   ├── models.py      <- SQL Alchemy models. 
+    │   ├── urlgen.py      <- Helper to generate the connection string
+    │   ├── ermodel.svg    <- Diagram of the models
+    │   └── secret.py      <- Secrets to build the connection string     
+    |{% endif %}       
+    │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    │
+    ├── generatediagrams.py <- Script to generate SVG diagrams of the models
+    │
+    ├── generatemodels.py   <- Script to generate SQL Alchemy models     
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
