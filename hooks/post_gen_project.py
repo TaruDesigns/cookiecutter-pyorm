@@ -51,4 +51,4 @@ if __name__ == "__main__":
     remove_db2 = remove_db2()
     add_to_gitignore("secret.py")
     print("Repo created! Make sure you check the README.md to init the models")
-    
+    print("WARNING: Create a virtual environment and install the created template dependencies before proceeding")

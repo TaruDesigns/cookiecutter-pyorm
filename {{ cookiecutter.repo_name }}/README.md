@@ -12,6 +12,7 @@ Make sure you have installed [Graphviz](https://graphviz.org/)
 ## Generate models
 Generate models `python generatemodels.py`
 Generate Diagrams `python generatediagrams.py`
+For ease of use when importing models into other files, install the generated package: `pip install -e .`
 
 
 

@@ -21,8 +21,8 @@ SQLAlchemy relies on models defined in code. Typically, you'd have to define the
 - [x] Connection string generator
 - [x] Model generator
 - [x] ER model printer
-- [ ] Autopopulate a basic jupyter notebook with the models that were created previously
-- [ ] Fill requirements.txt with the right dependencies
+- [x] Autopopulate a basic jupyter notebook with the models that were created previously
+- [x] Fill requirements.txt with the right dependencies
 
 ### Requirements to use the cookiecutter template:
 -----------
