@@ -16,24 +16,20 @@
     "db_1_username": "",
     "db_1_password": "",
     "db_1_port": "",
-    "add_db2": [
-        "yes",
-        "no"
-    ],
-    "db_2_name": "dev",
-    "db_2_connection_name": "app",
-    "__db2normalname__": "{{ cookiecutter.db_2_name.lower().replace(' ', '_') }}",
-    "db_2_type": [
+    "add_db2": false,
+    "db_2_name?{{add_db2}}": "dev",
+    "db_2_connection_name?{{add_db2}}": "app",
+    "__db2normalname__?{{add_db2}}": "{{ cookiecutter.db_2_name.lower().replace(' ', '_') }}",
+    "db_2_type?{{add_db2}}": [
         "PostgreSQL",
         "SQLite",
         "MySQL",
-        "SQLServer",
-        ""
+        "SQLServer"
     ],
-    "db_2_host": "",
-    "db_2_username": "",
-    "db_2_password": "",
-    "db_2_port": "",
+    "db_2_host?{{add_db2}}": "",
+    "db_2_username?{{add_db2}}": "",
+    "db_2_password?{{add_db2}}": "",
+    "db_2_port?{{add_db2}}": "",
     "open_source_license": [
         "MIT",
         "BSD-3-Clause",
