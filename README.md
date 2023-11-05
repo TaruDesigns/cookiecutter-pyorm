@@ -27,17 +27,17 @@ SQLAlchemy relies on models defined in code. Typically, you'd have to define the
 ### Requirements to use the cookiecutter template:
 -----------
  - Python 3.8+
- - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
+ - [Cookiecutter Python package](https://cookieninja.readthedocs.io/en/latest/installation.html): This can be installed with pip by or conda depending on how you manage your Python packages:
 
 ``` bash
-$ pip install cookiecutter
+$ pip install cookieninja
 ```
 
 or
 
 ``` bash
 $ conda config --add channels conda-forge
-$ conda install cookiecutter
+$ conda install cookieninja
 ```
 
 ### Requirements to generate the SVG diagrams:
