@@ -39,7 +39,7 @@ def urlgenerator(
         # pip install mysql-connector-python
         if port is None or port == "":
             port = 3306
-        return f"mysql://{user}:{password}@{server}:{port}/{db}"
+        return f"mysql+mysqlconnector://{user}:{password}@{server}:{port}/{db}"
     elif type.lower() == "sqlite":
         if port is None or port == "":
             port = 5432

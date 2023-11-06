@@ -5,7 +5,7 @@ coverage
 ruff
 python-dotenv>=0.5.1
 psycopg2>=2.9.9
-#mysqlclient Can't install through pip
+mysql-connector-python
 pyodbc>=5.0.1
 pymssql>=2.2.10
 sqlacodegen-v2>=0.1.4
