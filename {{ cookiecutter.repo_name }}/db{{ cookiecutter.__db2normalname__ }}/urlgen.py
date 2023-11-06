@@ -49,5 +49,5 @@ def urlgenerator(
         if port is None or port == "":
             port = 1433
         return (
-            f"mssql+pyodbc://{user}:{password}@{server}:{port}/{port}?driver=SQL+Server"
+            f"mssql+pyodbc://{user}:{password}@{server}:{port}/{db}?driver=SQL+Server"
         )
